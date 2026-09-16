@@ -1,1 +1,24 @@
-/* TODO: pages/athletes-table.css */
+main {
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  padding: 0 var(--space-6);
+}
+
+.hero {
+  padding: var(--space-6) 0 var(--space-5);
+  text-align: center;
+}
+
+.hero__title {
+  margin-bottom: var(--space-2);
+  color: var(--color-navy);
+}
+
+.hero__subtitle {
+  color: var(--color-text-secondary);
+  font-size: var(--fs-body);
+}
+
+.athletes-table-section {
+  padding-bottom: var(--space-7);
+}

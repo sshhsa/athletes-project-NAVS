@@ -1,1 +1,190 @@
-<!-- TODO: Екран 2 — "Список спортсменів НАВС" / Візуальна схема (таблиця) -->
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Список спортсменів НАВС — Табличний вигляд</title>
+    <link rel="stylesheet" href="../assets/css/main.css" />
+    <link rel="stylesheet" href="../assets/css/pages/athletes-table.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="site-header__brand">
+        <img
+          src="../assets/icons/emblem.svg"
+          alt="Емблема Національної академії внутрішніх справ"
+          class="site-header__emblem"
+          width="64"
+          height="64"
+        />
+        <p class="site-header__org-name">
+          Національна академія<br />
+          внутрішніх справ
+        </p>
+      </div>
+
+      <p class="site-header__tagline">Честь&nbsp;• Знання&nbsp;• Закон</p>
+
+      <div class="site-header__accent" aria-hidden="true"></div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <h1 class="hero__title">Список спортсменів НАВС</h1>
+        <p class="hero__subtitle">Табличний вигляд відображення даних</p>
+      </section>
+
+      <div class="toolbar">
+        <search class="toolbar__search">
+          <form action="#" method="get">
+            <label for="athlete-search" class="visually-hidden">Пошук за ПІБ</label>
+            <img class="toolbar__search-icon" src="../assets/icons/icon-search.svg" alt="" width="20" height="20" />
+            <input type="search" id="athlete-search" name="q" placeholder="Пошук за ПІБ..." />
+          </form>
+        </search>
+
+        <form class="toolbar__filters" action="#">
+          <div class="toolbar__filter">
+            <label for="filter-sport" class="visually-hidden">Фільтр за видом спорту</label>
+            <img src="../assets/icons/icon-sport.svg" alt="" width="20" height="20" />
+            <select id="filter-sport" name="sport">
+              <option value="">Фільтр за видом спорту</option>
+              <option value="sambo">Самбо</option>
+              <option value="thai-boxing">Тайський бокс</option>
+              <option value="athletics">Легка атлетика</option>
+              <option value="football">Футбол</option>
+              <option value="kickboxing">Кікбоксинг</option>
+              <option value="judo">Дзюдо</option>
+            </select>
+          </div>
+
+          <div class="toolbar__filter">
+            <label for="filter-course" class="visually-hidden">Фільтр за курсом</label>
+            <img src="../assets/icons/icon-course.svg" alt="" width="20" height="20" />
+            <select id="filter-course" name="course">
+              <option value="">Фільтр за курсом</option>
+              <option value="1">1 курс</option>
+              <option value="2">2 курс</option>
+              <option value="3">3 курс</option>
+              <option value="4">4 курс</option>
+            </select>
+          </div>
+        </form>
+
+        <nav class="toolbar__view-switch" aria-label="Перемикання вигляду списку">
+          <ul>
+            <li><a href="athletes-table.html" aria-current="page">Таблиця</a></li>
+            <li><a href="athletes-tile.html">Плитка</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <section class="athletes-table-section" aria-labelledby="athletes-table-heading">
+        <h2 id="athletes-table-heading" class="visually-hidden">Перелік спортсменів</h2>
+
+        <div class="athletes-table-wrapper">
+          <table class="athletes-table">
+            <thead>
+              <tr>
+                <th scope="col">ПІБ</th>
+                <th scope="col">Підрозділ</th>
+                <th scope="col">Курс</th>
+                <th scope="col">Вид спорту</th>
+                <th scope="col">Розряд</th>
+                <th scope="col">Досягнення</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Іваненко Олександр</th>
+                <td>ННІПД</td>
+                <td>2</td>
+                <td>Самбо</td>
+                <td>КМС</td>
+                <td>Чемпіон Києва 2026</td>
+              </tr>
+              <tr>
+                <th scope="row">Петренко Максим</th>
+                <td>ННЕКІ</td>
+                <td>3</td>
+                <td>Тайський бокс</td>
+                <td>МСУ</td>
+                <td>Призер чемпіонату України</td>
+              </tr>
+              <tr>
+                <th scope="row">Коваль Артем</th>
+                <td>Центральний корпус</td>
+                <td>1</td>
+                <td>Легка атлетика</td>
+                <td>I розряд</td>
+                <td>1 місце, Кубок НАВС</td>
+              </tr>
+              <tr>
+                <th scope="row">Мельник Владислав</th>
+                <td>ННІПД</td>
+                <td>4</td>
+                <td>Футбол</td>
+                <td>II розряд</td>
+                <td>Учасник збірної</td>
+              </tr>
+              <tr>
+                <th scope="row">Бондаренко Дмитро</th>
+                <td>ННЕКІ</td>
+                <td>2</td>
+                <td>Кікбоксинг</td>
+                <td>КМС</td>
+                <td>Призер чемпіонату України</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer__cards">
+        <article class="info-card">
+          <span class="info-card__icon">
+            <img src="../assets/icons/icon-info.svg" alt="" width="24" height="24" />
+          </span>
+          <div class="info-card__body">
+            <h2 class="info-card__title">Обов'язкові поля:</h2>
+            <p class="info-card__text">
+              фото, ПІБ, підрозділ, курс, вид спорту, розряд, досягнення
+            </p>
+          </div>
+        </article>
+
+        <article class="info-card">
+          <span class="info-card__icon">
+            <img src="../assets/icons/icon-clipboard.svg" alt="" width="24" height="24" />
+          </span>
+          <div class="info-card__body">
+            <h2 class="info-card__title">Призначення:</h2>
+            <p class="info-card__text">
+              облік спортсменів НАВС, їх спортивної кваліфікації та досягнень
+              для формування рейтингів, звітності та відбору до збірних.
+            </p>
+          </div>
+        </article>
+
+        <article class="info-card">
+          <span class="info-card__icon">
+            <img src="../assets/icons/icon-shield-check.svg" alt="" width="24" height="24" />
+          </span>
+          <div class="info-card__body">
+            <h2 class="info-card__title">Джерела даних:</h2>
+            <p class="info-card__text">
+              результати змагань, накази про присвоєння спортивних розрядів
+              та відомості деканатів і кафедри фізичного виховання.
+            </p>
+          </div>
+        </article>
+      </div>
+
+      <div class="site-footer__bottom-bar" aria-hidden="true">
+        <span></span><span></span>
+      </div>
+    </footer>
+  </body>
+</html>

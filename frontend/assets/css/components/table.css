@@ -1,1 +1,46 @@
-/* TODO: components/table.css */
+.athletes-table-wrapper {
+  overflow-x: auto;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-card);
+}
+
+.athletes-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: var(--color-white);
+  font-size: var(--fs-small);
+}
+
+.athletes-table thead th {
+  padding: var(--space-3) var(--space-4);
+  background-color: var(--color-navy);
+  color: var(--color-white);
+  font-weight: 600;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.athletes-table tbody th,
+.athletes-table tbody td {
+  padding: var(--space-3) var(--space-4);
+  border-bottom: 1px solid var(--color-border);
+  color: var(--color-text-primary);
+  text-align: left;
+  font-weight: 400;
+}
+
+.athletes-table tbody th {
+  font-weight: 600;
+  color: var(--color-navy);
+  white-space: nowrap;
+}
+
+.athletes-table tbody tr:nth-child(even) {
+  background-color: var(--color-surface);
+}
+
+.athletes-table tbody tr:last-child th,
+.athletes-table tbody tr:last-child td {
+  border-bottom: none;
+}
