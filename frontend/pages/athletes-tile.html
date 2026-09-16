@@ -1,1 +1,626 @@
-<!-- TODO: Екран 1 — "Список спортсменів НАВС" / Плитковий вигляд (6 карток) -->
+<!doctype html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Список спортсменів НАВС — Плитковий вигляд</title>
+    <link rel="stylesheet" href="../assets/css/main.css" />
+    <link rel="stylesheet" href="../assets/css/pages/athletes-tile.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="site-header__brand">
+        <img
+          src="../assets/icons/emblem.svg"
+          alt="Емблема Національної академії внутрішніх справ"
+          class="site-header__emblem"
+          width="64"
+          height="64"
+        />
+        <p class="site-header__org-name">
+          Національна академія<br />
+          внутрішніх справ
+        </p>
+      </div>
+
+      <p class="site-header__tagline">Честь&nbsp;• Знання&nbsp;• Закон</p>
+
+      <div class="site-header__accent" aria-hidden="true"></div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <h1 class="hero__title">Список спортсменів НАВС</h1>
+        <p class="hero__subtitle">Плитковий вигляд відображення даних</p>
+      </section>
+
+      <div class="toolbar">
+        <search class="toolbar__search">
+          <form action="#" method="get">
+            <label for="athlete-search" class="visually-hidden"
+              >Пошук за ПІБ</label
+            >
+            <img
+              class="toolbar__search-icon"
+              src="../assets/icons/icon-search.svg"
+              alt=""
+              width="20"
+              height="20"
+            />
+            <input
+              type="search"
+              id="athlete-search"
+              name="q"
+              placeholder="Пошук за ПІБ..."
+            />
+          </form>
+        </search>
+
+        <form class="toolbar__filters" action="#">
+          <div class="toolbar__filter">
+            <label for="filter-sport" class="visually-hidden"
+              >Фільтр за видом спорту</label
+            >
+            <img
+              src="../assets/icons/icon-sport.svg"
+              alt=""
+              width="20"
+              height="20"
+            />
+            <select id="filter-sport" name="sport">
+              <option value="">Фільтр за видом спорту</option>
+              <option value="sambo">Самбо</option>
+              <option value="thai-boxing">Тайський бокс</option>
+              <option value="athletics">Легка атлетика</option>
+              <option value="football">Футбол</option>
+              <option value="kickboxing">Кікбоксинг</option>
+              <option value="judo">Дзюдо</option>
+            </select>
+          </div>
+
+          <div class="toolbar__filter">
+            <label for="filter-course" class="visually-hidden"
+              >Фільтр за курсом</label
+            >
+            <img
+              src="../assets/icons/icon-course.svg"
+              alt=""
+              width="20"
+              height="20"
+            />
+            <select id="filter-course" name="course">
+              <option value="">Фільтр за курсом</option>
+              <option value="1">1 курс</option>
+              <option value="2">2 курс</option>
+              <option value="3">3 курс</option>
+              <option value="4">4 курс</option>
+            </select>
+          </div>
+        </form>
+
+        <nav
+          class="toolbar__view-switch"
+          aria-label="Перемикання вигляду списку"
+        >
+          <ul>
+            <li><a href="athletes-table.html">Таблиця</a></li>
+            <li><a href="athletes-tile.html" aria-current="page">Плитка</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <section class="athletes-grid" aria-labelledby="athletes-grid-heading">
+        <h2 id="athletes-grid-heading" class="visually-hidden">
+          Перелік спортсменів
+        </h2>
+
+        <ul class="athletes-grid__list">
+          <li>
+            <article class="athlete-card">
+              <img
+                class="athlete-card__photo"
+                src="../assets/images/placeholders/athlete-01.jpg"
+                alt="Фото: Іваненко Олександр"
+                width="120"
+                height="120"
+              />
+              <h3 class="athlete-card__name">Іваненко Олександр</h3>
+
+              <dl class="athlete-card__attrs">
+                <div>
+                  <dt>
+                    <img
+                      src="../assets/icons/icon-department.svg"
+                      alt=""
+                      width="18"
+                      height="18"
+                    />
+                    Підрозділ:
+                  </dt>
+                  <dd>ННІПД</dd>
+                </div>
+                <div>
+                  <dt>
+                    <img
+                      src="../assets/icons/icon-course.svg"
+                      alt=""
+                      width="18"
+                      height="18"
+                    />
+                    Курс:
+                  </dt>
+                  <dd>2</dd>
+                </div>
+                <div>
+                  <dt>
+                    <img
+                      src="../assets/icons/icon-sport.svg"
+                      alt=""
+                      width="18"
+                      height="18"
+                    />
+                    Вид спорту:
+                  </dt>
+                  <dd>Самбо</dd>
+                </div>
+                <div>
+                  <dt>
+                    <img
+                      src="../assets/icons/icon-rank.svg"
+                      alt=""
+                      width="18"
+                      height="18"
+                    />
+                    Розряд:
+                  </dt>
+                  <dd>КМС</dd>
+                </div>
+              </dl>
+
+              <p class="athlete-card__achievement">
+                <img
+                  src="../assets/icons/icon-trophy.svg"
+                  alt=""
+                  width="22"
+                  height="22"
+                />
+                <strong>Досягнення:</strong> Чемпіон Києва 2026
+              </p>
+            </article>
+          </li>
+
+          <li>
+            <article class="athlete-card">
+              <img
+                class="athlete-card__photo"
+                src="../assets/images/placeholders/athlete-02.jpg"
+                alt="Фото: Петренко Максим"
+                width="120"
+                height="120"
+              />
+              <h3 class="athlete-card__name">Петренко Максим</h3>
+
+              <dl class="athlete-card__attrs">
+                <div>
+                  <dt>
+                    <img
+                      src="../assets/icons/icon-department.svg"
+                      alt=""
+                      width="18"
+                      height="18"
+                    />
+                    Підрозділ:
+                  </dt>
+                  <dd>ННЕКІ</dd>
+                </div>
+                <div>
+                  <dt>
+                    <img
+                      src="../assets/icons/icon-course.svg"
+                      alt=""
+                      width="18"
+                      height="18"
+                    />
+                    Курс:
+                  </dt>
+                  <dd>3</dd>
+                </div>
+                <div>
+                  <dt>
+                    <img
+                      src="../assets/icons/icon-sport.svg"
+                      alt=""
+                      width="18"
+                      height="18"
+                    />
+                    Вид спорту:
+                  </dt>
+                  <dd>Тайський бокс</dd>
+                </div>
+                <div>
+                  <dt>
+                    <img
+                      src="../assets/icons/icon-rank.svg"
+                      alt=""
+                      width="18"
+                      height="18"
+                    />
+                    Розряд:
+                  </dt>
+                  <dd>МСУ</dd>
+                </div>
+              </dl>
+
+              <p class="athlete-card__achievement">
+                <img
+                  src="../assets/icons/icon-medal-star.svg"
+                  alt=""
+                  width="22"
+                  height="22"
+                />
+                <strong>Досягнення:</strong> Призер чемпіонату України
+              </p>
+            </article>
+          </li>
+
+          <li>
+            <article class="athlete-card">
+              <img
+                class="athlete-card__photo"
+                src="../assets/images/placeholders/athlete-03.jpg"
+                alt="Фото: Коваль Артем"
+                width="120"
+                height="120"
+              />
+              <h3 class="athlete-card__name">Коваль Артем</h3>
+
+              <dl class="athlete-card__attrs">
+                <div>
+                  <dt>
+                    <img
+                      src="../assets/icons/icon-department.svg"
+                      alt=""
+                      width="18"
+                      height="18"
+                    />
+                    Підрозділ:
+                  </dt>
+                  <dd>Центральний корпус</dd>
+                </div>
+                <div>
+                  <dt>
+                    <img
+                      src="../assets/icons/icon-course.svg"
+                      alt=""
+                      width="18"
+                      height="18"
+                    />
+                    Курс:
+                  </dt>
+                  <dd>1</dd>
+                </div>
+                <div>
+                  <dt>
+                    <img
+                      src="../assets/icons/icon-sport.svg"
+                      alt=""
+                      width="18"
+                      height="18"
+                    />
+                    Вид спорту:
+                  </dt>
+                  <dd>Легка атлетика</dd>
+                </div>
+                <div>
+                  <dt>
+                    <img
+                      src="../assets/icons/icon-rank.svg"
+                      alt=""
+                      width="18"
+                      height="18"
+                    />
+                    Розряд:
+                  </dt>
+                  <dd>I розряд</dd>
+                </div>
+              </dl>
+
+              <p class="athlete-card__achievement">
+                <img
+                  src="../assets/icons/icon-rank1.svg"
+                  alt=""
+                  width="22"
+                  height="22"
+                />
+                <strong>Досягнення:</strong> 1 місце, Кубок НАВС
+              </p>
+            </article>
+          </li>
+
+          <li>
+            <article class="athlete-card">
+              <img
+                class="athlete-card__photo"
+                src="../assets/images/placeholders/athlete-04.jpg"
+                alt="Фото: Мельник Владислав"
+                width="120"
+                height="120"
+              />
+              <h3 class="athlete-card__name">Мельник Владислав</h3>
+
+              <dl class="athlete-card__attrs">
+                <div>
+                  <dt>
+                    <img
+                      src="../assets/icons/icon-department.svg"
+                      alt=""
+                      width="18"
+                      height="18"
+                    />
+                    Підрозділ:
+                  </dt>
+                  <dd>ННІПД</dd>
+                </div>
+                <div>
+                  <dt>
+                    <img
+                      src="../assets/icons/icon-course.svg"
+                      alt=""
+                      width="18"
+                      height="18"
+                    />
+                    Курс:
+                  </dt>
+                  <dd>4</dd>
+                </div>
+                <div>
+                  <dt>
+                    <img
+                      src="../assets/icons/icon-sport.svg"
+                      alt=""
+                      width="18"
+                      height="18"
+                    />
+                    Вид спорту:
+                  </dt>
+                  <dd>Футбол</dd>
+                </div>
+                <div>
+                  <dt>
+                    <img
+                      src="../assets/icons/icon-rank.svg"
+                      alt=""
+                      width="18"
+                      height="18"
+                    />
+                    Розряд:
+                  </dt>
+                  <dd>II розряд</dd>
+                </div>
+              </dl>
+
+              <p class="athlete-card__achievement">
+                <img
+                  src="../assets/icons/icon-group.svg"
+                  alt=""
+                  width="22"
+                  height="22"
+                />
+                <strong>Досягнення:</strong> Учасник збірної
+              </p>
+            </article>
+          </li>
+
+          <li>
+            <article class="athlete-card">
+              <img
+                class="athlete-card__photo"
+                src="../assets/images/placeholders/athlete-05.jpg"
+                alt="Фото: Бондаренко Дмитро"
+                width="120"
+                height="120"
+              />
+              <h3 class="athlete-card__name">Бондаренко Дмитро</h3>
+
+              <dl class="athlete-card__attrs">
+                <div>
+                  <dt>
+                    <img
+                      src="../assets/icons/icon-department.svg"
+                      alt=""
+                      width="18"
+                      height="18"
+                    />
+                    Підрозділ:
+                  </dt>
+                  <dd>ННЕКІ</dd>
+                </div>
+                <div>
+                  <dt>
+                    <img
+                      src="../assets/icons/icon-course.svg"
+                      alt=""
+                      width="18"
+                      height="18"
+                    />
+                    Курс:
+                  </dt>
+                  <dd>2</dd>
+                </div>
+                <div>
+                  <dt>
+                    <img
+                      src="../assets/icons/icon-sport.svg"
+                      alt=""
+                      width="18"
+                      height="18"
+                    />
+                    Вид спорту:
+                  </dt>
+                  <dd>Кікбоксинг</dd>
+                </div>
+                <div>
+                  <dt>
+                    <img
+                      src="../assets/icons/icon-rank.svg"
+                      alt=""
+                      width="18"
+                      height="18"
+                    />
+                    Розряд:
+                  </dt>
+                  <dd>КМС</dd>
+                </div>
+              </dl>
+
+              <p class="athlete-card__achievement">
+                <img
+                  src="../assets/icons/icon-trophy.svg"
+                  alt=""
+                  width="22"
+                  height="22"
+                />
+                <strong>Досягнення:</strong> Призер чемпіонату України
+              </p>
+            </article>
+          </li>
+
+          <li>
+            <article class="athlete-card">
+              <img
+                class="athlete-card__photo"
+                src="../assets/images/placeholders/athlete-06.jpg"
+                alt="Фото: Сидоренко Віталій"
+                width="120"
+                height="120"
+              />
+              <h3 class="athlete-card__name">Сидоренко Віталій</h3>
+
+              <dl class="athlete-card__attrs">
+                <div>
+                  <dt>
+                    <img
+                      src="../assets/icons/icon-department.svg"
+                      alt=""
+                      width="18"
+                      height="18"
+                    />
+                    Підрозділ:
+                  </dt>
+                  <dd>Центральний корпус</dd>
+                </div>
+                <div>
+                  <dt>
+                    <img
+                      src="../assets/icons/icon-course.svg"
+                      alt=""
+                      width="18"
+                      height="18"
+                    />
+                    Курс:
+                  </dt>
+                  <dd>3</dd>
+                </div>
+                <div>
+                  <dt>
+                    <img
+                      src="../assets/icons/icon-sport.svg"
+                      alt=""
+                      width="18"
+                      height="18"
+                    />
+                    Вид спорту:
+                  </dt>
+                  <dd>Дзюдо</dd>
+                </div>
+                <div>
+                  <dt>
+                    <img
+                      src="../assets/icons/icon-rank.svg"
+                      alt=""
+                      width="18"
+                      height="18"
+                    />
+                    Розряд:
+                  </dt>
+                  <dd>I розряд</dd>
+                </div>
+              </dl>
+
+              <p class="athlete-card__achievement">
+                <img
+                  src="../assets/icons/icon-medal-star.svg"
+                  alt=""
+                  width="22"
+                  height="22"
+                />
+                <strong>Досягнення:</strong> Призер чемпіонату України
+              </p>
+            </article>
+          </li>
+        </ul>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer__cards">
+        <article class="info-card">
+          <span class="info-card__icon">
+            <img
+              src="../assets/icons/icon-info.svg"
+              alt=""
+              width="24"
+              height="24"
+            />
+          </span>
+          <div class="info-card__body">
+            <h2 class="info-card__title">Обов'язкові поля:</h2>
+            <p class="info-card__text">
+              фото, ПІБ, підрозділ, курс, вид спорту, розряд, досягнення
+            </p>
+          </div>
+        </article>
+
+        <article class="info-card">
+          <span class="info-card__icon">
+            <img
+              src="../assets/icons/icon-clipboard.svg"
+              alt=""
+              width="24"
+              height="24"
+            />
+          </span>
+          <div class="info-card__body">
+            <h2 class="info-card__title">Призначення:</h2>
+            <p class="info-card__text">
+              облік спортсменів НАВС, їх спортивної кваліфікації та досягнень
+              для формування рейтингів, звітності та відбору до збірних.
+            </p>
+          </div>
+        </article>
+
+        <article class="info-card">
+          <span class="info-card__icon">
+            <img
+              src="../assets/icons/icon-shield-check.svg"
+              alt=""
+              width="24"
+              height="24"
+            />
+          </span>
+          <div class="info-card__body">
+            <h2 class="info-card__title">Переваги плиткового вигляду:</h2>
+            <p class="info-card__text">
+              швидкий огляд, зручне сприйняття даних та компактне представлення
+              профілів спортсменів у наочному форматі.
+            </p>
+          </div>
+        </article>
+      </div>
+
+      <div class="site-footer__bottom-bar" aria-hidden="true">
+        <span></span><span></span>
+      </div>
+    </footer>
+  </body>
+</html>
