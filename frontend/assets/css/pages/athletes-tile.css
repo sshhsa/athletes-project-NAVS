@@ -1,1 +1,30 @@
-/* TODO: pages/athletes-tile.css */
+main {
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  padding: 0 var(--space-6);
+}
+
+.hero {
+  padding: var(--space-6) 0 var(--space-5);
+  text-align: center;
+}
+
+.hero__title {
+  margin-bottom: var(--space-2);
+  color: var(--color-navy);
+}
+
+.hero__subtitle {
+  color: var(--color-text-secondary);
+  font-size: var(--fs-body);
+}
+
+.athletes-grid {
+  padding-bottom: var(--space-7);
+}
+
+.athletes-grid__list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-5);
+}

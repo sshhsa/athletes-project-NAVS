@@ -1,1 +1,69 @@
-/* TODO: components/search-filter.css */
+.toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+  margin-bottom: var(--space-6);
+}
+
+.toolbar__search form {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.toolbar__search-icon {
+  position: absolute;
+  left: var(--space-3);
+  pointer-events: none;
+}
+
+.toolbar__search input[type="search"] {
+  min-width: 260px;
+  padding: var(--space-2) var(--space-3) var(--space-2) var(--space-7);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  font-family: var(--font-family-base);
+  font-size: var(--fs-body);
+  color: var(--color-text-primary);
+}
+
+.toolbar__search input[type="search"]::placeholder {
+  color: var(--color-text-secondary);
+}
+
+.toolbar__search input[type="search"]:focus-visible {
+  outline: 2px solid var(--color-navy);
+  outline-offset: 2px;
+}
+
+.toolbar__filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+}
+
+.toolbar__filter {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-3);
+  background-color: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+}
+
+.toolbar__filter select {
+  border: none;
+  background: transparent;
+  font-family: var(--font-family-base);
+  font-size: var(--fs-small);
+  color: var(--color-text-primary);
+  cursor: pointer;
+}
+
+.toolbar__filter select:focus-visible {
+  outline: 2px solid var(--color-navy);
+  outline-offset: 2px;
+}

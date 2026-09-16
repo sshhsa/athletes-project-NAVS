@@ -1,1 +1,27 @@
-/* TODO: components/button.css */
+.toolbar__view-switch ul {
+  display: flex;
+  gap: var(--space-1);
+  padding: var(--space-1);
+  background-color: var(--color-surface);
+  border-radius: var(--radius-sm);
+}
+
+.toolbar__view-switch a {
+  display: inline-block;
+  padding: var(--space-2) var(--space-4);
+  border-radius: var(--radius-sm);
+  font-size: var(--fs-small);
+  font-weight: 600;
+  color: var(--color-text-secondary);
+  text-decoration: none;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.toolbar__view-switch a:hover {
+  color: var(--color-navy);
+}
+
+.toolbar__view-switch a[aria-current="page"] {
+  background-color: var(--color-navy);
+  color: var(--color-white);
+}
