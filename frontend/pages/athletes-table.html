@@ -30,8 +30,9 @@
 
     <main>
       <section class="hero">
+        <img class="hero__badge" src="../assets/icons/badge-emblem.svg" alt="" width="72" height="72" />
         <h1 class="hero__title">Список спортсменів НАВС</h1>
-        <p class="hero__subtitle">Табличний вигляд відображення даних</p>
+        <p class="hero__subtitle">Візуальна схема відображення даних</p>
       </section>
 
       <div class="toolbar">
@@ -71,12 +72,17 @@
           </div>
         </form>
 
-        <nav class="toolbar__view-switch" aria-label="Перемикання вигляду списку">
-          <ul>
-            <li><a href="athletes-table.html" aria-current="page">Таблиця</a></li>
-            <li><a href="athletes-tile.html">Плитка</a></li>
-          </ul>
-        </nav>
+        <div class="toolbar__actions">
+          <button type="button" class="btn btn--secondary">
+            <img src="../assets/icons/icon-reset.svg" alt="" width="18" height="18" />
+            Скинути фільтри
+          </button>
+          <!-- Додавання спортсмена буде активовано після впровадження бекенду та авторизації викладачів -->
+          <button type="button" class="btn btn--primary" disabled>
+            <img src="../assets/icons/icon-plus.svg" alt="" width="18" height="18" />
+            Додати спортсмена
+          </button>
+        </div>
       </div>
 
       <section class="athletes-table-section" aria-labelledby="athletes-table-heading">
@@ -86,6 +92,7 @@
           <table class="athletes-table">
             <thead>
               <tr>
+                <th scope="col">Фото</th>
                 <th scope="col">ПІБ</th>
                 <th scope="col">Підрозділ</th>
                 <th scope="col">Курс</th>
@@ -96,42 +103,67 @@
             </thead>
             <tbody>
               <tr>
+                <td>
+                  <img class="athletes-table__photo" src="../assets/images/placeholders/athlete-01.jpg" alt="Фото: Іваненко Олександр" width="40" height="40" />
+                </td>
                 <th scope="row">Іваненко Олександр</th>
                 <td>ННІПД</td>
                 <td>2</td>
-                <td>Самбо</td>
+                <td class="athletes-table__sport">
+                  <img src="../assets/icons/icon-sambo.svg" alt="" width="20" height="20" /> Самбо
+                </td>
                 <td>КМС</td>
                 <td>Чемпіон Києва 2026</td>
               </tr>
               <tr>
+                <td>
+                  <img class="athletes-table__photo" src="../assets/images/placeholders/athlete-02.jpg" alt="Фото: Петренко Максим" width="40" height="40" />
+                </td>
                 <th scope="row">Петренко Максим</th>
                 <td>ННЕКІ</td>
                 <td>3</td>
-                <td>Тайський бокс</td>
+                <td class="athletes-table__sport">
+                  <img src="../assets/icons/icon-thai-boxing.svg" alt="" width="20" height="20" /> Тайський бокс
+                </td>
                 <td>МСУ</td>
                 <td>Призер чемпіонату України</td>
               </tr>
               <tr>
+                <td>
+                  <img class="athletes-table__photo" src="../assets/images/placeholders/athlete-03.jpg" alt="Фото: Коваль Артем" width="40" height="40" />
+                </td>
                 <th scope="row">Коваль Артем</th>
                 <td>Центральний корпус</td>
                 <td>1</td>
-                <td>Легка атлетика</td>
+                <td class="athletes-table__sport">
+                  <img src="../assets/icons/icon-athletics.svg" alt="" width="20" height="20" /> Легка атлетика
+                </td>
                 <td>I розряд</td>
                 <td>1 місце, Кубок НАВС</td>
               </tr>
               <tr>
+                <td>
+                  <img class="athletes-table__photo" src="../assets/images/placeholders/athlete-04.jpg" alt="Фото: Мельник Владислав" width="40" height="40" />
+                </td>
                 <th scope="row">Мельник Владислав</th>
                 <td>ННІПД</td>
                 <td>4</td>
-                <td>Футбол</td>
+                <td class="athletes-table__sport">
+                  <img src="../assets/icons/icon-football.svg" alt="" width="20" height="20" /> Футбол
+                </td>
                 <td>II розряд</td>
                 <td>Учасник збірної</td>
               </tr>
               <tr>
+                <td>
+                  <img class="athletes-table__photo" src="../assets/images/placeholders/athlete-05.jpg" alt="Фото: Бондаренко Дмитро" width="40" height="40" />
+                </td>
                 <th scope="row">Бондаренко Дмитро</th>
                 <td>ННЕКІ</td>
                 <td>2</td>
-                <td>Кікбоксинг</td>
+                <td class="athletes-table__sport">
+                  <img src="../assets/icons/icon-kickboxing.svg" alt="" width="20" height="20" /> Кікбоксинг
+                </td>
                 <td>КМС</td>
                 <td>Призер чемпіонату України</td>
               </tr>
@@ -175,8 +207,7 @@
           <div class="info-card__body">
             <h2 class="info-card__title">Джерела даних:</h2>
             <p class="info-card__text">
-              результати змагань, накази про присвоєння спортивних розрядів
-              та відомості деканатів і кафедри фізичного виховання.
+              кадрові дані, підрозділи, спортивні результати, накази та протоколи змагань.
             </p>
           </div>
         </article>

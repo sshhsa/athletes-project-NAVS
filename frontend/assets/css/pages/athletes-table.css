@@ -5,8 +5,16 @@ main {
 }
 
 .hero {
+  position: relative;
   padding: var(--space-6) 0 var(--space-5);
   text-align: center;
+}
+
+.hero__badge {
+  position: absolute;
+  top: 50%;
+  right: var(--space-2);
+  transform: translateY(-50%);
 }
 
 .hero__title {
@@ -17,6 +25,10 @@ main {
 .hero__subtitle {
   color: var(--color-text-secondary);
   font-size: var(--fs-body);
+}
+
+.toolbar__actions {
+  margin-left: auto;
 }
 
 .athletes-table-section {
