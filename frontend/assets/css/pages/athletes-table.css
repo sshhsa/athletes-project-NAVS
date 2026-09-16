@@ -34,3 +34,25 @@ main {
 .athletes-table-section {
   padding-bottom: var(--space-7);
 }
+
+@media (max-width: 1024px) {
+  .hero__badge {
+    width: 56px;
+    height: 56px;
+  }
+}
+
+@media (max-width: 640px) {
+  main {
+    padding: 0 var(--space-4);
+  }
+
+  .hero__badge {
+    display: none;
+  }
+
+  .toolbar__actions {
+    margin-left: 0;
+    width: 100%;
+  }
+}

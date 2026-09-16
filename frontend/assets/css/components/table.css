@@ -62,3 +62,20 @@
   vertical-align: middle;
   margin-right: var(--space-2);
 }
+
+@media (max-width: 640px) {
+  .athletes-table {
+    font-size: 0.8rem;
+  }
+
+  .athletes-table thead th,
+  .athletes-table tbody th,
+  .athletes-table tbody td {
+    padding: var(--space-2) var(--space-3);
+  }
+
+  .athletes-table__photo {
+    width: 32px;
+    height: 32px;
+  }
+}

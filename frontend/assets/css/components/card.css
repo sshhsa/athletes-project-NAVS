@@ -79,3 +79,10 @@
 .athlete-card__achievement strong {
   color: var(--color-navy);
 }
+
+@media (max-width: 640px) {
+  .athlete-card__photo {
+    width: 96px;
+    height: 96px;
+  }
+}

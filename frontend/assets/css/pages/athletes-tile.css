@@ -36,3 +36,28 @@ main {
   grid-template-columns: repeat(3, 1fr);
   gap: var(--space-5);
 }
+
+@media (max-width: 1024px) {
+  .athletes-grid__list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .hero__badge {
+    width: 56px;
+    height: 56px;
+  }
+}
+
+@media (max-width: 640px) {
+  main {
+    padding: 0 var(--space-4);
+  }
+
+  .hero__badge {
+    display: none;
+  }
+
+  .athletes-grid__list {
+    grid-template-columns: 1fr;
+  }
+}

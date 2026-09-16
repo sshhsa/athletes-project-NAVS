@@ -68,3 +68,28 @@
   opacity: 0.5;
   cursor: not-allowed;
 }
+
+@media (max-width: 640px) {
+  .toolbar__view-switch ul {
+    width: 100%;
+  }
+
+  .toolbar__view-switch li {
+    flex: 1;
+  }
+
+  .toolbar__view-switch a {
+    display: block;
+    text-align: center;
+  }
+
+  .toolbar__actions {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .btn {
+    width: 100%;
+    justify-content: center;
+  }
+}

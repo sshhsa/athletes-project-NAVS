@@ -1,51 +1,83 @@
 .site-header {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: var(--space-4);
-    padding: var(--space-4) var(--space-6);
-    background-color: var(--color-navy);
-    overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+  padding: var(--space-4) var(--space-6);
+  background-color: var(--color-navy);
+  overflow: hidden;
 }
 
 .site-header__brand {
-    position: relative;
-    z-index: 1;
-    display: flex;
-    align-items: center;
-    gap: var(--space-4);
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
 }
 
 .site-header__emblem {
-    flex-shrink: 0;
+  flex-shrink: 0;
 }
 
 .site-header__org-name {
-    color: var(--color-white);
-    font-weight: 700;
-    font-size: 1.1rem;
-    line-height: 1.35;
-    text-transform: uppercase;
+  color: var(--color-white);
+  font-weight: 700;
+  font-size: 1.1rem;
+  line-height: 1.35;
+  text-transform: uppercase;
 }
 
 .site-header__tagline {
-    position: relative;
-    z-index: 1;
-    color: var(--color-white);
-    font-weight: 600;
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
-    white-space: nowrap;
+  position: relative;
+  z-index: 1;
+  color: var(--color-white);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  white-space: nowrap;
 }
 
+/* декоративна золота діагональна смуга у правому кутку шапки */
 .site-header__accent {
-    position: absolute;
-    top: -60%;
-    right: -8%;
-    width: 40%;
-    height: 220%;
-    background-color: var(--color-gold);
-    transform: rotate(-18deg);
-    z-index: 0;
+  position: absolute;
+  top: -60%;
+  right: -8%;
+  width: 40%;
+  height: 220%;
+  background-color: var(--color-gold);
+  transform: rotate(-18deg);
+  z-index: 0;
+}
+
+@media (max-width: 1024px) {
+  .site-header {
+    padding: var(--space-4);
+  }
+
+  .site-header__tagline {
+    display: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .site-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-3);
+  }
+
+  .site-header__emblem {
+    width: 48px;
+    height: 48px;
+  }
+
+  .site-header__org-name {
+    font-size: 0.95rem;
+  }
+
+  .site-header__accent {
+    display: none;
+  }
 }
