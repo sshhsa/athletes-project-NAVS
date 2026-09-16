@@ -1,1 +1,25 @@
-/* TODO: components/footer.css */
+.site-footer {
+    margin-top: var(--space-7);
+}
+
+.site-footer__cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-5);
+    padding: 0 var(--space-6) var(--space-6);
+}
+
+.site-footer__bottom-bar {
+    display: flex;
+    height: 18px;
+}
+
+.site-footer__bottom-bar span:first-child {
+    flex: 1;
+    background-color: var(--color-navy);
+}
+
+.site-footer__bottom-bar span:last-child {
+    flex-basis: 18%;
+    background-color: var(--color-gold);
+}

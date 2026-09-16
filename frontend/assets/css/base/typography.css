@@ -1,1 +1,27 @@
-/* TODO: base/typography.css */
+body {
+    font-family: var(--font-family-base);
+    font-size: var(--fs-body);
+    color: var(--color-text-primary);
+    background-color: var(--color-white);
+}
+
+h1,
+h2,
+h3 {
+    font-weight: 700;
+    color: var(--color-navy);
+}
+
+h1 {
+    font-size: var(--fs-h1);
+}
+
+h2 {
+    font-size: var(--fs-h2);
+}
+
+small,
+.text-small {
+    font-size: var(--fs-small);
+    color: var(--color-text-secondary);
+}

@@ -1,1 +1,32 @@
-/* TODO: base/variables.css */
+:root {
+    --color-navy: #16235c;
+    --color-navy-dark: #0f1a47;
+    --color-gold: #f5b921;
+    --color-white: #ffffff;
+    --color-text-primary: #16235c;
+    --color-text-secondary: #667080;
+    --color-border: #e3e7ef;
+    --color-surface: #eef2fb;
+    --color-photo-bg: #d1d9e6;
+
+    --font-family-base: "Inter", "Segoe UI", Arial, sans-serif;
+    --fs-h1: 2.75rem;
+    --fs-h2: 1.75rem;
+    --fs-body: 1rem;
+    --fs-small: 0.875rem;
+
+    --space-1: 4px;
+    --space-2: 8px;
+    --space-3: 12px;
+    --space-4: 16px;
+    --space-5: 24px;
+    --space-6: 32px;
+    --space-7: 48px;
+
+    --radius-sm: 8px;
+    --radius-md: 12px;
+    --radius-lg: 16px;
+    --shadow-card: 0 2px 8px rgba(22, 35, 92, 0.08);
+
+    --container-max-width: 1280px;
+}
