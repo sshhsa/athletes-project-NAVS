@@ -1,0 +1,14 @@
+# deps
+node_modules/
+
+# env
+.env
+
+# backend temp uploads
+backend/temp/*
+!backend/temp/.gitkeep
+
+# os / editor
+.DS_Store
+.vscode/
+*.log

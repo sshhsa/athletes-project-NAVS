@@ -1,0 +1,12 @@
+/* Точка входу — підключення всіх часткових стилів */
+@import url("base/reset.css");
+@import url("base/variables.css");
+@import url("base/typography.css");
+
+@import url("components/header.css");
+@import url("components/footer.css");
+@import url("components/card.css");
+@import url("components/table.css");
+@import url("components/search-filter.css");
+@import url("components/button.css");
+@import url("components/info-card.css");
