@@ -4,7 +4,7 @@ import { randomUUID } from "node:crypto";
 
 import { User } from "../models/User.js";
 import { HttpError } from "../helpers/HttpError.js";
-import { sendVerificationEmail } from "./sendEmail.js";
+import { sendVerificationEmail } from "./emailServices.js";
 
 export const registerUser = async ({ name, email, password }) => {
   const existingUser = await User.findOne({ email });
