@@ -1,6 +1,6 @@
 import { Router } from "express";
 
-import { athleteControllers } from "../controllers/athleteControllers.js";
+import { athleteControllers } from "../controllers/athletesControllers.js";
 import { validateBody } from "../middlewares/validateBody.js";
 import { authenticate } from "../middlewares/authenticate.js";
 import {
