@@ -26,7 +26,7 @@ const transporter = nodemailer.createTransport({
 });
 
 export const sendVerificationEmail = async ({ email, verificationToken }) => {
-  const templatePath = path.join(__dirname, "./templates/verify-email.hbs");
+  const templatePath = path.join(__dirname, "../templates/verify-email.hbs");
   const templateSource = await fs.readFile(templatePath, "utf-8");
   const template = handlebars.compile(templateSource);
 
