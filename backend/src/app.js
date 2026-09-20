@@ -1,4 +1,3 @@
-// backend/src/app.js
 import express from "express";
 import cors from "cors";
 import morgan from "morgan";
@@ -7,7 +6,7 @@ import cookieParser from "cookie-parser";
 import { notFoundHandler } from "./middlewares/notFoundHandler.js";
 import { errorHandler } from "./middlewares/errorHandler.js";
 import { authRouter } from "./routes/authRouter.js";
-import { athleteRouter } from "./routes/athleteRouter.js";
+import { athleteRouter } from "./routes/athletesRouter.js";
 
 export const app = express();
 
