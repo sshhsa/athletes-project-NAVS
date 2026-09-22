@@ -1,6 +1,8 @@
 import { ctrlWrapper } from "../helpers/ctrlWrapper.js";
 import { HttpError } from "../helpers/HttpError.js";
 import { Athlete } from "../models/Athlete.js";
+import { unlink } from "node:fs/promises";
+import { uploadAvatar } from "../services/cloudinaryServices.js";
 
 const getAll = async (req, res) => {
   const athletes = await Athlete.find({ owner: req.user._id });
@@ -60,10 +62,34 @@ const remove = async (req, res) => {
   res.json({ message: "Athlete deleted" });
 };
 
+export const updateAvatar = async (req, res) => {
+  const { id } = req.params;
+
+  if (!req.file) {
+    throw HttpError(400, "No file uploaded");
+  }
+
+  const avatarURL = await uploadAvatar(req.file.path);
+  await unlink(req.file.path);
+
+  const updatedAthlete = await Athlete.findOneAndUpdate(
+    { _id: id, owner: req.user._id },
+    { avatarURL },
+    { new: true },
+  );
+
+  if (!updatedAthlete) {
+    throw HttpError(404, "Athlete not found");
+  }
+
+  res.json(updatedAthlete);
+};
+
 export const athleteControllers = {
   getAll: ctrlWrapper(getAll),
   getById: ctrlWrapper(getById),
   create: ctrlWrapper(create),
   update: ctrlWrapper(update),
   remove: ctrlWrapper(remove),
+  updateAvatar: ctrlWrapper(updateAvatar),
 };

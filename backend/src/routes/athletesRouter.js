@@ -7,6 +7,7 @@ import {
   createAthleteSchema,
   updateAthleteSchema,
 } from "../schemas/athleteSchemas.js";
+import { upload } from "../middlewares/upload.js";
 
 export const athleteRouter = Router();
 
@@ -23,5 +24,10 @@ athleteRouter.patch(
   "/:id",
   validateBody(updateAthleteSchema),
   athleteControllers.update,
+);
+athleteRouter.patch(
+  "/:id/avatar",
+  upload.single("avatar"),
+  athleteControllers.updateAvatar,
 );
 athleteRouter.delete("/:id", athleteControllers.remove);
